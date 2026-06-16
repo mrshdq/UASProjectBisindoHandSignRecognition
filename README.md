@@ -33,11 +33,14 @@ Dataset yang digunakan pada penelitian ini tersedia secara publik di Kaggle dan 
 🔗 Kaggle Dataset:
 https://www.kaggle.com/datasets/achmadnoer/alfabet-bisindo
 
+🔗 Google Drive Dataset:
+https://drive.google.com/file/d/1ZCnfKFLb4mkKbZhRyYD9tQkak7Ao85NY/view?usp=drive_link
+
 # 📥 Drive Demonstrasi
 
 Demonstrasi model dapat tersedia secara publik di Google Drive dan dapat diakses melalui tautan berikut:
 
-🔗 Demonstrasi:
+🔗 Google Drive Demonstrasi:
 https://drive.google.com/file/d/1jMSKo4g3uCOb7sLNeSqltO7slPu_9s5m/view?usp=sharing
 
 
