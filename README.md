@@ -21,7 +21,7 @@ Proyek ini bertujuan untuk mengenali dan mengklasifikasikan **27 huruf** dalam B
 ### 📊 Dataset
 | Properti | Keterangan |
 |----------|------------|
-| **Jumlah data** | 287 gambar |
+| **Jumlah data** | 312 gambar |
 | **Jumlah kelas** | 27 (A-Z + venv) |
 | **Split data** | 80% training, 20% validation |
 | **Augmentasi** | Rotasi, brightness, flip, blur |
