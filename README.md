@@ -13,7 +13,7 @@
 
 Proyek ini bertujuan untuk membangun sistem **pengenalan huruf Bahasa Isyarat Indonesia (BISINDO)** menggunakan metode **Convolutional Neural Network (CNN)** dengan pendekatan **Transfer Learning** menggunakan arsitektur **MobileNetV2**.
 
-Model dikembangkan untuk mengklasifikasikan **27 kelas** (huruf A–Z dan satu kelas tambahan) berdasarkan citra isyarat tangan. Sistem ini diharapkan dapat menjadi langkah awal dalam pengembangan teknologi bantu berbasis kecerdasan buatan bagi penyandang tunarungu.
+Model dikembangkan untuk mengklasifikasikan **27 kelas** (huruf A–Z dan satu kelas Virtual Environment) berdasarkan citra isyarat tangan. Sistem ini diharapkan dapat menjadi langkah awal dalam pengembangan teknologi bantu berbasis kecerdasan buatan bagi penyandang tunarungu.
 
 ---
 
