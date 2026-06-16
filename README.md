@@ -26,6 +26,13 @@ Model dikembangkan untuk mengklasifikasikan **27 kelas** (huruf A–Z dan satu k
 
 ---
 
+# 📥 Unduh Dataset
+
+Dataset yang digunakan pada penelitian ini tersedia secara publik di Kaggle dan dapat diunduh melalui tautan berikut:
+
+🔗 Kaggle Dataset:
+https://www.kaggle.com/datasets/achmadnoer/alfabet-bisindo
+
 # 📂 Dataset
 
 | Properti            | Keterangan                                |
@@ -34,6 +41,7 @@ Model dikembangkan untuk mengklasifikasikan **27 kelas** (huruf A–Z dan satu k
 | **Jumlah Kelas**    | 27 kelas                                  |
 | **Pembagian Data**  | 80% Training, 20% Validation              |
 | **Augmentasi Data** | Rotasi, Brightness, Horizontal Flip, Blur |
+
 
 ### Struktur Dataset
 
