@@ -41,8 +41,9 @@ Model dikembangkan untuk mengklasifikasikan **27 kelas** (huruf A–Z dan satu k
 Dataset_Bisindo/
 │
 ├── A/
-│   ├── gambar1.jpg
-│   ├── gambar2.jpg
+│   ├── body dot (1).jpg
+│   ├── body dot (2).jpg
+│   ├── wall white (1).jpg
 │   └── ...
 │
 ├── B/
