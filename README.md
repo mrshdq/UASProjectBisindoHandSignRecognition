@@ -155,17 +155,6 @@ Model hasil pelatihan akan disimpan sebagai:
 - `bisindo_final.keras`
 - `best_model.h5`
 
----
-
-## 💻 Kebutuhan Sistem
-
-| Komponen | Minimum |
-|----------|---------|
-| Python | 3.10 |
-| RAM | 8 GB |
-| Penyimpanan | 2 GB |
-| TensorFlow | 2.x |
-
 
 ---
 
