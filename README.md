@@ -17,6 +17,18 @@ Model dikembangkan untuk mengklasifikasikan **27 kelas** (huruf A–Z dan satu k
 
 ---
 
+# 📖 Presentasi Proyek
+Materi presentasi (PowerPoint/PDF) yang menjelaskan latar belakang, metodologi, arsitektur model, hasil eksperimen, dan kesimpulan dapat diakses pada tautan berikut:
+
+🔗 Canva:
+https://canva.link/52g6v111bc6cx3d
+
+🔗 Google Drive:
+https://drive.google.com/file/d/1-bv8FA8XkbkfZGRhcU-gUe2S_EwyCHv7/view?usp=drive_link
+
+
+---
+
 # 🎯 Tujuan
 
 * Mengembangkan sistem pengenalan huruf BISINDO berbasis Artificial Intelligence (AI).
