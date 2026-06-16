@@ -1,105 +1,166 @@
 # 🖐️ BISINDO Hand Sign Recognition
 
-## Pengenalan Huruf Bahasa Isyarat Indonesia menggunakan Convolutional Neural Network
+> **Pengenalan Huruf Bahasa Isyarat Indonesia (BISINDO) Menggunakan Convolutional Neural Network (CNN) dengan Transfer Learning MobileNetV2**
+
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
+![Keras](https://img.shields.io/badge/Keras-Deep%20Learning-red)
+![Status](https://img.shields.io/badge/Status-Selesai-brightgreen)
 
 ---
 
-### 📌 Deskripsi Proyek
-Proyek ini bertujuan untuk mengenali dan mengklasifikasikan **27 huruf** dalam Bahasa Isyarat Indonesia (BISINDO) menggunakan **Convolutional Neural Network (CNN)** dengan arsitektur **MobileNetV2**.
+# 📖 Deskripsi Proyek
 
-**Akurasi yang dicapai: 100%** pada data validasi! 🏆
+Proyek ini bertujuan untuk membangun sistem **pengenalan huruf Bahasa Isyarat Indonesia (BISINDO)** menggunakan metode **Convolutional Neural Network (CNN)** dengan pendekatan **Transfer Learning** menggunakan arsitektur **MobileNetV2**.
 
----
-
-### 🎯 Tujuan
-- Membantu penyandang tunarungu dalam berkomunikasi
-- Mengembangkan sistem pengenalan isyarat tangan berbasis AI
-- Menerapkan transfer learning dengan MobileNetV2
+Model dikembangkan untuk mengklasifikasikan **27 kelas** (huruf A–Z dan satu kelas tambahan) berdasarkan citra isyarat tangan. Sistem ini diharapkan dapat menjadi langkah awal dalam pengembangan teknologi bantu berbasis kecerdasan buatan bagi penyandang tunarungu.
 
 ---
 
-### 📊 Dataset
-| Properti | Keterangan |
-|----------|------------|
-| **Jumlah data** | 312 gambar |
-| **Jumlah kelas** | 27 (A-Z + venv) |
-| **Split data** | 80% training, 20% validation |
-| **Augmentasi** | Rotasi, brightness, flip, blur |
+# 🎯 Tujuan
 
-**Struktur Folder:**
+* Mengembangkan sistem pengenalan huruf BISINDO berbasis Artificial Intelligence (AI).
+* Menerapkan metode Transfer Learning menggunakan MobileNetV2.
+* Mengevaluasi performa CNN dalam klasifikasi citra bahasa isyarat.
+* Mendukung penelitian di bidang Computer Vision dan teknologi asistif.
+
+---
+
+# 📂 Dataset
+
+| Properti            | Keterangan                                |
+| ------------------- | ----------------------------------------- |
+| **Jumlah Gambar**   | 312 gambar                                |
+| **Jumlah Kelas**    | 27 kelas                                  |
+| **Pembagian Data**  | 80% Training, 20% Validation              |
+| **Augmentasi Data** | Rotasi, Brightness, Horizontal Flip, Blur |
+
+### Struktur Dataset
+
+```text
 Dataset_Bisindo/
+│
 ├── A/
-│ ├── body dot (1).jpg
-│ ├── body dot (2).jpg
-│ ├── white wall (1).jpg
-│ └── ...
+│   ├── gambar1.jpg
+│   ├── gambar2.jpg
+│   └── ...
+│
 ├── B/
-│ └── ...
+│   └── ...
+│
+├── ...
+│
 └── Z/
-└── ...
+```
 
 ---
 
-### 🏗️ Arsitektur Model
-MobileNetV2 (pretrained - frozen)
-↓
+# 🏗️ Arsitektur Model
+
+Model dibangun menggunakan **Transfer Learning MobileNetV2** sebagai feature extractor.
+
+```text
+MobileNetV2 (Pretrained - Frozen)
+                │
 GlobalAveragePooling2D
-↓
+                │
 BatchNormalization
-↓
-Dense 512 (ReLU) + L2 Regularization
-↓
-BatchNormalization + Dropout 0.5
-↓
-Dense 256 (ReLU) + L2 Regularization
-↓
-BatchNormalization + Dropout 0.4
-↓
-Dense 128 (ReLU) + L2 Regularization
-↓
-BatchNormalization + Dropout 0.3
-↓
+                │
+Dense 512 (ReLU)
+L2 Regularization
+                │
+BatchNormalization
+Dropout 0.5
+                │
+Dense 256 (ReLU)
+L2 Regularization
+                │
+BatchNormalization
+Dropout 0.4
+                │
+Dense 128 (ReLU)
+L2 Regularization
+                │
+BatchNormalization
+Dropout 0.3
+                │
 Dense 27 (Softmax)
-
-
-| Parameter | Nilai |
-|-----------|-------|
-| **Total Parameter** | 3,090,267 |
-| **Trainable** | 827,931 |
-| **Learning Rate** | 0.0003 |
-| **Epochs** | 50 |
-| **Batch Size** | 16 |
+```
 
 ---
 
-### 📈 Hasil Evaluasi
+# ⚙️ Konfigurasi Pelatihan
 
-| Metrik | Hasil |
-|--------|-------|
+| Parameter           | Nilai                    |
+| ------------------- | ------------------------ |
+| Backbone            | MobileNetV2              |
+| Optimizer           | Adam                     |
+| Learning Rate       | 0.0003                   |
+| Epoch               | 50                       |
+| Batch Size          | 16                       |
+| Loss Function       | Categorical Crossentropy |
+| Total Parameter     | 3.090.267                |
+| Trainable Parameter | 827.931                  |
+
+---
+
+# 📊 Hasil Evaluasi
+
+Evaluasi dilakukan menggunakan data **validation**.
+
+| Metrik                  | Hasil    |
+| ----------------------- | -------- |
 | **Validation Accuracy** | **100%** |
-| **Average Accuracy** | **100%** |
-| **Precision** | 1.00 |
-| **Recall** | 1.00 |
-| **F1-Score** | 1.00 |
+| **Precision**           | **1.00** |
+| **Recall**              | **1.00** |
+| **F1-Score**            | **1.00** |
 
-#### Confusion Matrix
-![Confusion Matrix](confusion.png)
-
-#### Accuracy & Loss Plot
-![Plot](plot.png)
-
-#### Akurasi per Kelas
-| Huruf | Akurasi | Status |
-|-------|---------|--------|
-| A-Z | 100% | ✅ |
-| H (sebelumnya bermasalah) | 100% | ✅ FIXED! |
-| I, M, B, E | 100% | ✅ FIXED! |
+> **Catatan:** Akurasi 100% diperoleh pada data validasi yang digunakan dalam penelitian. Performa model pada kondisi nyata dapat dipengaruhi oleh pencahayaan, sudut tangan, latar belakang, dan kualitas kamera.
 
 ---
 
-### 🚀 Cara Menjalankan
+# 📈 Visualisasi Hasil
 
-#### 1. Clone Repository
-```bash
-git clone https://github.com/username/bisindo-hand-sign-recognition.git
-cd bisindo-hand-sign-recognition
+## Confusion Matrix
+
+<p align="center">
+  <img src="confusion.png" width="600">
+</p>
+
+## Grafik Akurasi dan Loss
+
+<p align="center">
+  <img src="plot.png" width="600">
+</p>
+
+---
+
+# 📌 Akurasi per Kelas
+
+| Huruf | Akurasi | Status |
+| ----- | ------- | ------ |
+| A – Z | 100%    | ✅      |
+| H     | 100%    | ✅      |
+| I     | 100%    | ✅      |
+| M     | 100%    | ✅      |
+| B     | 100%    | ✅      |
+| E     | 100%    | ✅      |
+
+---
+
+# 📁 Struktur Repository
+
+```text
+BISINDO-Hand-Sign-Recognition/
+│
+├── Dataset_Bisindo/
+├── model/
+│   └── model.keras
+├── notebook/
+│   └── training.ipynb
+├── confusion.png
+├── plot.png
+├── requirements.txt
+├── README.md
+└── LICENSE
+```
