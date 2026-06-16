@@ -156,20 +156,16 @@ Evaluasi dilakukan menggunakan data **validation**.
 | E     | 100%    | ✅      |
 
 ---
-
 # 📁 Struktur Repository
 
 ```text
 BISINDO-Hand-Sign-Recognition/
 │
-├── Dataset_Bisindo/
-├── model/
-│   └── model.keras
-├── notebook/
-│   └── training.ipynb
-├── confusion.png
-├── plot.png
-├── requirements.txt
-├── README.md
-└── LICENSE
+├── README.md                 # Dokumentasi proyek
+├── best_model.h5             # Model terbaik dalam format HDF5
+├── bisindo_final.keras       # Model akhir dalam format Keras
+├── bisindo_project_new.py    # Script utama pelatihan model CNN
+├── confusion.png             # Visualisasi confusion matrix
+├── plot.png                  # Grafik akurasi dan loss
+└── test.py                   # Script untuk melakukan pengujian/prediksi
 ```
