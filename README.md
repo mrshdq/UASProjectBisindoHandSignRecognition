@@ -44,6 +44,129 @@ Demonstrasi model dapat tersedia secara publik di Google Drive dan dapat diakses
 https://drive.google.com/file/d/1jMSKo4g3uCOb7sLNeSqltO7slPu_9s5m/view?usp=sharing
 
 
+---
+
+# 🚀 Cara Menjalankan Program
+
+## 1. Clone Repository
+
+```bash
+git clone https://github.com/username/BISINDO-Hand-Sign-Recognition.git
+cd BISINDO-Hand-Sign-Recognition
+```
+
+---
+
+## 2. Unduh Dataset
+
+Unduh dataset melalui salah satu tautan berikut:
+
+- **Kaggle:** https://www.kaggle.com/datasets/achmadnoer/alfabet-bisindo
+- **Google Drive:** https://drive.google.com/file/d/1ZCnfKFLb4mkKbZhRyYD9tQkak7Ao85NY/view?usp=drive_link
+
+Kemudian ekstrak dataset sehingga memiliki struktur berikut:
+
+```text
+Dataset_Bisindo/
+├── A/
+├── B/
+├── C/
+├── ...
+└── Z/
+```
+
+---
+
+## 3. Install Library
+
+Install seluruh library yang dibutuhkan.
+
+```bash
+pip install tensorflow
+pip install numpy
+pip install opencv-python
+pip install matplotlib
+pip install scikit-learn
+pip install pillow
+```
+
+Atau apabila tersedia file `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 4. Menjalankan Program Prediksi
+
+Model (`bisindo_final.keras`) sudah tersedia pada repository sehingga **tidak perlu melakukan training ulang**.
+
+Jalankan program berikut:
+
+```bash
+python test.py
+```
+
+Program akan menampilkan menu:
+
+```text
+--------------------------------------------------
+DEMO BISINDO
+--------------------------------------------------
+
+1. Prediksi Satu Gambar
+2. Test Semua Huruf
+3. Keluar
+```
+
+### Menu 1 – Prediksi Satu Gambar
+
+Masukkan lokasi gambar yang akan diprediksi, misalnya:
+
+```text
+Dataset_Bisindo/A/body dot (1).jpg
+```
+
+Contoh hasil:
+
+```text
+File       : body dot (1).jpg
+Prediksi   : A
+Confidence : 99.92%
+```
+
+### Menu 2 – Pengujian Semua Huruf
+
+Program akan menguji satu gambar dari setiap kelas dan menampilkan hasil prediksi beserta nilai confidence.
+
+---
+
+## 5. Training Model (Opsional)
+
+Apabila ingin melatih ulang model menggunakan dataset yang tersedia, jalankan:
+
+```bash
+python bisindo_project_new.py
+```
+
+Model hasil pelatihan akan disimpan sebagai:
+
+- `bisindo_final.keras`
+- `best_model.h5`
+
+---
+
+## 💻 Kebutuhan Sistem
+
+| Komponen | Minimum |
+|----------|---------|
+| Python | 3.10 |
+| RAM | 8 GB |
+| Penyimpanan | 2 GB |
+| TensorFlow | 2.x |
+
+
 # 📂 Dataset
 
 | Properti            | Keterangan                                |
